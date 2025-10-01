@@ -27,4 +27,10 @@ class Food extends Model
     {
         return $this->belongsTo(Category::class, 'category_id');
     }
+
+    public function billDetails()
+    {
+        return $this->hasMany(BillDetail::class, 'food_id');
+    }
 }
+
